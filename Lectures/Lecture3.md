@@ -895,7 +895,7 @@ TARGET:
 
 控制流图 (Control Flow Graph) 是一个包含条件块的图，表示程序的控制流。它通常用于表示程序的执行顺序和分支跳转。
 
-![Control Flow Graph](Lecture3.assets/1741765623592.png)
+![Control Flow Graph](Lecture3.assets/image.png)
 
 数据流图和控制流图表示的都是一个逻辑过程，这个过程可以由多种方式实现，比如 C 语言，以及我们这里提到的汇编语言。
 
