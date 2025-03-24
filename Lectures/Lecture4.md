@@ -1,5 +1,7 @@
 # Lecture 4 : Embedded System & Project Developent Cycle (嵌入式系统与项目开发周期)
 
+> Lecture @ 2025-3-17
+
 ## 嵌入式系统的开发周期
 
 对于开发一个嵌入式系统，有这样的过程
