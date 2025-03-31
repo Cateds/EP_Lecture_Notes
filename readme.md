@@ -9,3 +9,4 @@
 - [Lecture 3 : Assembly and Machine Language (汇编语言与机器语言)](Lectures/Lecture3.md)
 - [Lecture 4 : Embedded System & Project Development Cycle (嵌入式系统与项目开发周期)](Lectures/Lecture4.md)
 - [Lecture 5 : Testing and Debugging - I (测试与调试 - I)](Lectures/Lecture5.md)
+- [Lecutre 6 : Testing & Debugging - II (测试与调试 - II)](Lectures/Lecture6.md)
