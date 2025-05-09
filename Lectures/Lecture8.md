@@ -36,7 +36,7 @@ $$
 ```cpp
 // 定义了一个 DAC 输出对象，连接在 A6 引脚
 AnalogOut dac_out(A6);
-// 设置 DAC 输出为 0.5 * Vmax
+// 设置 DAC 输出为 0.5 * Vref
 dac_out = 0.5;
 ```
 
