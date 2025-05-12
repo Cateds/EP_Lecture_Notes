@@ -1,6 +1,8 @@
 # Lecture 9 : Inter Integrated Circuit (I2C)
 
 > 是的，没错，I2C 在 Microelectronic System 里也讲过了
+>
+> 点击这里查看 [Microelectronic System 复习 : I2C](./MS_Review_Notes/B4P2.md)
 
 ## 背景知识
 
