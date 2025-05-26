@@ -16,3 +16,5 @@
   - [Microelectronic System 复习 : I2C](./Lectures/MS_Review_Notes/B4P1.md)
 - [Lecture 10 : Serial Peripheral Interface (SPI)](Lectures/Lecture10.md)
   - [Microelectronic System 复习 : SPI](./Lectures/MS_Review_Notes/B4P1.md)
+- [Lecture 11 : Modular Programming (模块化编程)](Lectures/Lecture11.md)
+- [Lecture 12 : Energy Efficient Embedded System (低功耗嵌入式系统)](Lectures/Lecture12.md)
