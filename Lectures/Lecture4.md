@@ -2,7 +2,9 @@
 
 > Lecture @ 2025-3-17
 
-## 嵌入式系统的开发周期
+## 嵌入式系统
+
+### 嵌入式系统的开发周期
 
 对于开发一个嵌入式系统，有这样的过程
 
@@ -88,6 +90,54 @@
    - 收集用户和相关人员反馈
    - 确定升级需求和新功能
    - 基于反馈进行迭代
+
+### 技术就绪水平 (Technology Readiness Level, TRL)
+
+技术就绪水平 (Technology Readiness Level, TRL) 是一个用于评估技术成熟度的标准。它通常用于评估新技术在实际应用中的可行性和可靠性。TRL 分为 1 到 9 共 9 个等级，数字越大表示技术越成熟。
+
+![TRL](Lecture4.assets/1749291111133.png)
+
+这九个 TRL 等级分别是：
+
+- TRL 1: 基础原理观察 (Basic Principles Observed)
+  - 技术的基本原理被观察和记录，但尚未进行实验验证。
+- TRL 2: 技术概念形成 (Technology Concept Formulated)
+  - 技术概念被提出，可能有初步的理论分析，但没有实验验证。
+- TRL 3: 实验验证 (Experimental Proof of Concept)
+  - 技术概念在实验室环境中得到验证，初步证明其可行性。
+- TRL 4: 实验室验证 (Technology Validated in Lab)
+  - 技术在实验室环境中得到验证，初步证明其可行性和可靠性。
+- TRL 5: 实验室验证 (Technology Validated in Relevant Environment)
+  - 技术在相关环境中得到验证，证明其在实际应用中的可行性。
+- TRL 6: 系统原型演示 (System/Subsystem Model or Prototype Demonstrated in Relevant Environment)
+  - 技术的系统原型在相关环境中得到演示，证明其在实际应用中的可行性和可靠性。
+- TRL 7: 系统原型演示 (System Prototype Demonstrated in Operational Environment)
+  - 技术的系统原型在实际操作环境中得到演示，证明其在实际应用中的可行性和可靠性。
+- TRL 8: 系统完成 (Actual System Completed and Qualified Through Test and Demonstration)
+  - 技术的实际系统完成并通过测试和演示验证其可行性和可靠性。
+- TRL 9: 系统实际应用 (Actual System Proven in Operational Environment)
+  - 技术的实际系统在实际操作环境中得到验证，证明其在实际应用中的可行性和可靠性。
+
+### 质量属性 (Quality Attributes)
+
+质量属性是指系统在设计和实现过程中需要考虑的非功能性需求。它们通常影响系统的性能、可靠性、安全性等方面。它们可以被分成两类：
+
+- Operational Quality Attributes (操作质量属性)
+  - 这一类是与嵌入式系统的运行和操作相关的属性
+  - 比如
+    - 响应时间 (Response Time)
+    - 吞吐量 (Throughput)
+    - 可靠性 (Reliability)
+    - 可维护性 (Maintainability)
+    - 安全性 (Security, Safety)
+- Non-operational Quality Attributes (非操作质量属性)
+  - 这一类是和系统运行无关的属性
+  - 比如
+    - 可测试性/可调试性 (Testability/Debuggability)
+    - 可扩展性 (Scalability)
+    - 上市时间 (Time to Market)
+    - 可移植性 (Portability)
+    - 单位成本和收入 (Cost and Revenue per Unit)
 
 ## 嵌入式固件 (Embedded Firmware)
 

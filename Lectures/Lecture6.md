@@ -1,5 +1,7 @@
 # Lecture 6 : Testing & Debugging - II
 
+> Lecture @ 2025-3-31
+
 ## Task Scheduling (任务调度)
 
 Task Scheduler (任务调度程序) 是嵌入式操作系统的核心部分。它负责管理和调度不同的任务，响应中断，将处理器的控制交给对应的任务。决定哪个任务能使用 CPU 的算法即为调度算法 (Scheduling Algorithm)。
