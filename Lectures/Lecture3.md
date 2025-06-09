@@ -76,9 +76,7 @@
     0x02      0x56
     0x03      0x78  <- LSB
     ```
-
   - 在传输过程中，大端存储的传输顺序是从高位到低位，低位在后，也就是 MSB -> LSB
-
 - 小端存储 (Little Endian)
 
   - 小端存储是指数据的低位字节存储在低地址中，高位字节存储在高地址中
@@ -91,7 +89,6 @@
     0x02      0x34
     0x03      0x12  <- MSB
     ```
-
   - 在传输过程中，小端存储的传输顺序是从低位到高位，高位在后，也就是 LSB -> MSB
 
 大端模式和小端模式不只在内存中存储数据时有区别，在网络传输数据时也有区别。网络传输数据时，通常使用大端模式来存储数据。这是因为大端模式更符合人类的阅读习惯。
@@ -193,7 +190,7 @@
     - 数据存储器 (Data Memory)
       - 存储 CPU 要处理的数据
 
-可以从图中看到，ARM 处理器的指令存储器和数据存储器是分开的，这种结构叫做冯·诺依曼结构 (Von Neumann Architecture)。冯·诺依曼结构的优点是简单，缺点是速度慢，因为 CPU 只能同时访问一个存储器。
+可以从图中看到，ARM 处理器的指令存储器和数据存储器是分开的，这种结构叫做哈佛架构，在 [Lecture.1](./Lecture1.md#不同的电脑架构) 中有提到。实际上，对于 ARM 指令集的处理器，两种架构都是存在的。
 
 ### 流水线 (Pipeline)
 
@@ -658,23 +655,23 @@ ORRMI R4, R0, R9  ; 如果小于等于(MI)，执行 ORR
 
 在 ARM 的条件判断中有这些后缀可用：
 
-| Cond | 助记符      | 名字                                | 条件表达式                             |
-| ---- | ----------- | ----------------------------------- | -------------------------------------- |
-| 0000 | `EQ`        | Equal                               | $Z$                                    |
-| 0001 | `NE`        | Not Equal                           | $\overline{Z}$                         |
+| Cond | 助记符          | 名字                                | 条件表达式                               |
+| ---- | --------------- | ----------------------------------- | ---------------------------------------- |
+| 0000 | `EQ`          | Equal                               | $Z$                                    |
+| 0001 | `NE`          | Not Equal                           | $\overline{Z}$                         |
 | 0010 | `CS` / `HS` | Carry Set / Unsigned higher or same | $C$                                    |
 | 0011 | `CC` / `LO` | Carry Clear / Unsigned lower        | $\overline{C}$                         |
-| 0100 | `MI`        | Minus /Negative                     | $N$                                    |
-| 0101 | `PL`        | Plus / Positive or Zero             | $\overline{N}$                         |
-| 0110 | `VS`        | Overflow (Set)                      | $V$                                    |
-| 0111 | `VC`        | Overflow Clear / No Overflow        | $\overline{V}$                         |
-| 1000 | `HI`        | Unsigned Higher                     | $C \overline{Z}$                       |
-| 1001 | `LS`        | Unsigned Lower or Same              | $\overline{C} + Z$                     |
-| 1010 | `GE`        | Signed Greater or Equal             | $\overline{N \oplus V}$                |
-| 1011 | `LT`        | Signed Less Than                    | $N \oplus V$                           |
-| 1100 | `GT`        | Signed Greater Than                 | $\overline{Z} (\overline{N \oplus V})$ |
-| 1101 | `LE`        | Signed Less Than or Equal           | $Z + (N \oplus V)$                     |
-| 1110 | `AL` / none | Always / unconditional              | 1                                      |
+| 0100 | `MI`          | Minus /Negative                     | $N$                                    |
+| 0101 | `PL`          | Plus / Positive or Zero             | $\overline{N}$                         |
+| 0110 | `VS`          | Overflow (Set)                      | $V$                                    |
+| 0111 | `VC`          | Overflow Clear / No Overflow        | $\overline{V}$                         |
+| 1000 | `HI`          | Unsigned Higher                     | $C \overline{Z}$                       |
+| 1001 | `LS`          | Unsigned Lower or Same              | $\overline{C} + Z$                     |
+| 1010 | `GE`          | Signed Greater or Equal             | $\overline{N \oplus V}$                |
+| 1011 | `LT`          | Signed Less Than                    | $N \oplus V$                           |
+| 1100 | `GT`          | Signed Greater Than                 | $\overline{Z} (\overline{N \oplus V})$ |
+| 1101 | `LE`          | Signed Less Than or Equal           | $Z + (N \oplus V)$                     |
+| 1110 | `AL` / none   | Always / unconditional              | 1                                        |
 
 #### 分支执行 (Branching)
 
