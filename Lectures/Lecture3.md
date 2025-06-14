@@ -61,7 +61,7 @@
 
 计算机如果要把一个数据存储在内存中，需要按照一定的格式。
 
-数据存储在内存中。内存的基础单元是一个字节 (8 bits)，一个字节可以存储一个字符。内存是由很多个字节组成的，每个字节都有一个地址。这个地址是一个无符号整数，表示这个字节在内存中的位置。地址具有一定的长度，比如 32 位的地址可以表示 2^32 个字节的内存空间 (也就是 4GiB )，64 位的地址可以表示 2^64 个字节的内存空间。ARM (arm64 之前的架构) 处理器使用的是 32 位的地址。
+数据存储在内存中。内存的基础单元是一个字节 (8 bits)，一个字节可以存储一个字符。内存是由很多个字节组成的，每个字节都有一个地址。这个地址是一个无符号整数，表示这个字节在内存中的位置。地址具有一定的长度，比如 32 位的地址可以表示 $2^{32}$ 个字节的内存空间 (也就是 4GiB )，64 位的地址可以表示 $2^{64}$ 个字节的内存空间。ARM (arm64 之前的架构) 处理器使用的是 32 位的地址。
 
 对于需要占据多个字节的数据，数据的存储也有两种方式
 
@@ -77,9 +77,7 @@
     0x02      0x56
     0x03      0x78  <- LSB
     ```
-
   - 在传输过程中，大端存储的传输顺序是从高位到低位，低位在后，也就是 MSB -> LSB
-
 - 小端存储 (Little Endian)
 
   - 小端存储是指数据的低位字节存储在低地址中，高位字节存储在高地址中
@@ -92,7 +90,6 @@
     0x02      0x34
     0x03      0x12  <- MSB
     ```
-
   - 在传输过程中，小端存储的传输顺序是从低位到高位，高位在后，也就是 LSB -> MSB
 
 大端模式和小端模式不只在内存中存储数据时有区别，在网络传输数据时也有区别。网络传输数据时，通常使用大端模式来存储数据。这是因为大端模式更符合人类的阅读习惯。
@@ -123,7 +120,7 @@
   - 汇编语言命令 (Assembly-language instruction)
   - 处理器硬件活动 (processor hardware actions)
 
-对于 RISC 指令集的处理器，它是加载/存储机器 (load/store machine)，也就是说，它只能通过加载指令从内存中读取数据到寄存器，或者通过存储指令将寄存器中的数据写入内存。所有的操作都必须在寄存器中进行。
+对于 RISC 指令集的处理器，它是加载/存储机 (load/store machine)，也就是说，它只能通过加载指令从内存中读取数据到寄存器，或者通过存储指令将寄存器中的数据写入内存。所有的操作都必须在寄存器中进行。
 
 ![Loading](Lecture3.assets/1741688758215.png)
 ![Storing](Lecture3.assets/1741688774795.png)
@@ -134,7 +131,7 @@
 
 - `R0` 到 `R12`: 通用寄存器 (general-purpose registers)
   - 位宽为 32 位
-  - 可以用于存储数据或者地址，数据可以是 32 位、16 位、8 位等
+  - 可以用于存储数据或者地址，数据可以是 32 位 (word)、16 位 (half word)、8 位 (byte)
 - `R13`: 栈指针寄存器 (SP, stack pointer register)
   - 位宽为 32 位
   - 用于存储栈的地址
@@ -659,23 +656,23 @@ ORRMI R4, R0, R9  ; 如果小于等于(MI)，执行 ORR
 
 在 ARM 的条件判断中有这些后缀可用：
 
-| Cond | 助记符      | 名字                                | 条件表达式                             |
-| ---- | ----------- | ----------------------------------- | -------------------------------------- |
-| 0000 | `EQ`        | Equal                               | $Z$                                    |
-| 0001 | `NE`        | Not Equal                           | $\overline{Z}$                         |
+| Cond | 助记符          | 名字                                | 条件表达式                               |
+| ---- | --------------- | ----------------------------------- | ---------------------------------------- |
+| 0000 | `EQ`          | Equal                               | $Z$                                    |
+| 0001 | `NE`          | Not Equal                           | $\overline{Z}$                         |
 | 0010 | `CS` / `HS` | Carry Set / Unsigned higher or same | $C$                                    |
 | 0011 | `CC` / `LO` | Carry Clear / Unsigned lower        | $\overline{C}$                         |
-| 0100 | `MI`        | Minus /Negative                     | $N$                                    |
-| 0101 | `PL`        | Plus / Positive or Zero             | $\overline{N}$                         |
-| 0110 | `VS`        | Overflow (Set)                      | $V$                                    |
-| 0111 | `VC`        | Overflow Clear / No Overflow        | $\overline{V}$                         |
-| 1000 | `HI`        | Unsigned Higher                     | $C \overline{Z}$                       |
-| 1001 | `LS`        | Unsigned Lower or Same              | $\overline{C} + Z$                     |
-| 1010 | `GE`        | Signed Greater or Equal             | $\overline{N \oplus V}$                |
-| 1011 | `LT`        | Signed Less Than                    | $N \oplus V$                           |
-| 1100 | `GT`        | Signed Greater Than                 | $\overline{Z} (\overline{N \oplus V})$ |
-| 1101 | `LE`        | Signed Less Than or Equal           | $Z + (N \oplus V)$                     |
-| 1110 | `AL` / none | Always / unconditional              | 1                                      |
+| 0100 | `MI`          | Minus /Negative                     | $N$                                    |
+| 0101 | `PL`          | Plus / Positive or Zero             | $\overline{N}$                         |
+| 0110 | `VS`          | Overflow (Set)                      | $V$                                    |
+| 0111 | `VC`          | Overflow Clear / No Overflow        | $\overline{V}$                         |
+| 1000 | `HI`          | Unsigned Higher                     | $C \overline{Z}$                       |
+| 1001 | `LS`          | Unsigned Lower or Same              | $\overline{C} + Z$                     |
+| 1010 | `GE`          | Signed Greater or Equal             | $\overline{N \oplus V}$                |
+| 1011 | `LT`          | Signed Less Than                    | $N \oplus V$                           |
+| 1100 | `GT`          | Signed Greater Than                 | $\overline{Z} (\overline{N \oplus V})$ |
+| 1101 | `LE`          | Signed Less Than or Equal           | $Z + (N \oplus V)$                     |
+| 1110 | `AL` / none   | Always / unconditional              | 1                                        |
 
 #### 分支执行 (Branching)
 

@@ -51,8 +51,6 @@ float adc_val = adc_in.read();
 
 ## PWM (Pulse Width Modulation, 脉冲宽度调制)
 
-> 所以为什么这里要提到 PWM？用 ADC 实现的 PWM 这个实在是有点太小众了，一般都是用定时器来实现的
-
 ### PWM 基础部分
 
 ![PWM](Lecture7.assets/1744621525792.png)
@@ -73,7 +71,7 @@ float adc_val = adc_in.read();
 
 ### Mbed 中的 PWM
 
-ADC 是一种实现 PWM 的可行方式，在 Mbed OS 中被包装成了 `PwmOut` 类。这个类的实现是通过对一个引脚进行快速的开关操作来实现 PWM 信号的输出。PWM 信号的占空比可以通过设置引脚的高电平和低电平的时间比例来控制。
+在 Mbed OS 中，PWM相关操作被包装成了 `PwmOut` 类。这个类的实现是通过对一个引脚进行快速的开关操作来实现 PWM 信号的输出。PWM 信号的占空比可以通过设置引脚的高电平和低电平的时间比例来控制。
 
 下面是一些在 MS 里就提到过的 PWM 相关的类方法：
 

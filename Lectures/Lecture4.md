@@ -105,13 +105,13 @@
   - 技术概念被提出，可能有初步的理论分析，但没有实验验证。
 - TRL 3: 实验验证 (Experimental Proof of Concept)
   - 技术概念在实验室环境中得到验证，初步证明其可行性。
-- TRL 4: 实验室验证 (Technology Validated in Lab)
+- TRL 4: 实验室环境验证 (Technology Validated in Lab)
   - 技术在实验室环境中得到验证，初步证明其可行性和可靠性。
-- TRL 5: 实验室验证 (Technology Validated in Relevant Environment)
+- TRL 5: 相关环境验证 (Technology Validated in Relevant Environment)
   - 技术在相关环境中得到验证，证明其在实际应用中的可行性。
-- TRL 6: 系统原型演示 (System/Subsystem Model or Prototype Demonstrated in Relevant Environment)
+- TRL 6: 相关环境系统原型演示 (System/Subsystem Model or Prototype Demonstrated in Relevant Environment)
   - 技术的系统原型在相关环境中得到演示，证明其在实际应用中的可行性和可靠性。
-- TRL 7: 系统原型演示 (System Prototype Demonstrated in Operational Environment)
+- TRL 7: 工作环境系统原型演示 (System Prototype Demonstrated in Operational Environment)
   - 技术的系统原型在实际操作环境中得到演示，证明其在实际应用中的可行性和可靠性。
 - TRL 8: 系统完成 (Actual System Completed and Qualified Through Test and Demonstration)
   - 技术的实际系统完成并通过测试和演示验证其可行性和可靠性。
