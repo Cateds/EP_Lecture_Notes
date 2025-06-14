@@ -99,23 +99,23 @@
 
 这九个 TRL 等级分别是：
 
-- TRL 1: 基础原理观察 (Basic Principles Observed)
+- TRL 1: 基础原理观察 (Basic Principles Observed and Reported)
   - 技术的基本原理被观察和记录，但尚未进行实验验证。
-- TRL 2: 技术概念形成 (Technology Concept Formulated)
+- TRL 2: 技术概念形成 (Technology Concept/Application Formulated)
   - 技术概念被提出，可能有初步的理论分析，但没有实验验证。
-- TRL 3: 实验验证 (Experimental Proof of Concept)
+- TRL 3: 概念实验验证 (Analytical and experimental critical function and/or characteristic proof of concept)
   - 技术概念在实验室环境中得到验证，初步证明其可行性。
-- TRL 4: 实验室环境验证 (Technology Validated in Lab)
+- TRL 4: 实验室环境技术验证 (Component Validation in Laboratory Environment)
   - 技术在实验室环境中得到验证，初步证明其可行性和可靠性。
-- TRL 5: 相关环境验证 (Technology Validated in Relevant Environment)
+- TRL 5: 相关环境技术验证 (Component Validation in Relevant Environment)
   - 技术在相关环境中得到验证，证明其在实际应用中的可行性。
 - TRL 6: 相关环境系统原型演示 (System/Subsystem Model or Prototype Demonstrated in Relevant Environment)
   - 技术的系统原型在相关环境中得到演示，证明其在实际应用中的可行性和可靠性。
-- TRL 7: 工作环境系统原型演示 (System Prototype Demonstrated in Operational Environment)
+- TRL 7: 工作环境系统原型演示 (System Prototype Demonstrated in Real Environment)
   - 技术的系统原型在实际操作环境中得到演示，证明其在实际应用中的可行性和可靠性。
-- TRL 8: 系统完成 (Actual System Completed and Qualified Through Test and Demonstration)
+- TRL 8: 系统完成及验证通过 (Actual System Completed and Qualified Through Test and Demonstration)
   - 技术的实际系统完成并通过测试和演示验证其可行性和可靠性。
-- TRL 9: 系统实际应用 (Actual System Proven in Operational Environment)
+- TRL 9: 系统实际应用 (Actual System through Successful Operation)
   - 技术的实际系统在实际操作环境中得到验证，证明其在实际应用中的可行性和可靠性。
 
 ### 质量属性 (Quality Attributes)
@@ -150,6 +150,7 @@
 - 使用高级语言编写 (HLL, High-level Language) 程序
   - 通常使用的是嵌入式的 C/C++ 语言编写程序
   - > 实际上现在也有别的开发语言的选项，如果 Rust 发展的好的话也许也能进军嵌入式领域。不过现在最多的还是 C
+    >
   - 通常在集成开发环境 (IDE) 中编写
     - IDE 里包含了编辑器，编译器，连接器，调试器，仿真器等
     - 不同的 IDE 通常对应着不同的硬件平台
